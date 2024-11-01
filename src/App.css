@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f8ff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#flashcard {
+  width: 300px;
+  height: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border: 2px solid #333;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  position: relative;
+}
+
+#score,
+#timer {
+  position: absolute;
+  top: 10px;
+  font-weight: bold;
+}
+
+#score {
+  left: 10px;
+}
+
+#timer {
+  right: 10px;
+}
+
+.option-button {
+  margin: 5px;
+  padding: 8px 16px;
+  font-size: 1em;
+  border-radius: 4px;
+  border: none;
+  background-color: #0073e6;
   color: white;
+  cursor: pointer;
+  width: 80px;
 }
 
-.App-link {
-  color: #61dafb;
+.option-button:hover {
+  background-color: #005bb5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.correct {
+  background-color: #28a745 !important;
+}
+
+.incorrect {
+  background-color: #dc3545 !important;
+}
+
+#caption {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.feedback {
+  font-weight: bold;
+  color: #dc3545; /* Red for incorrect or feedback message */
+}
+
+.sentence {
+  font-weight: normal;
+  color: #555; /* Darker gray for sentence */
+  display: block;
+  margin-top: 5px;
+}
+
+.translation {
+  font-style: italic;
+  color: #888; /* Lighter gray for distinction */
+  font-size: 0.9em; /* Slightly smaller to set it apart */
+  margin-top: 5px;
+  display: block;
+  text-align: center;
+}
+
+#continue-button {
+  margin-top: 25px;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 4px;
+  border: none;
+  background-color: #0073e6;
+  color: white;
+  cursor: pointer;
 }
